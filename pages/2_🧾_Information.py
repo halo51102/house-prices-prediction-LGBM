@@ -4,49 +4,48 @@ def app():
     st.set_page_config(page_title="Information", page_icon="🧾")
 
     st.markdown("""
-# House Price Prediction
+# Dự đoán giá nhà
 
-## Description
+## Mô tả
 
-This repo has been developed for the Istanbul Data Science Bootcamp, organized in cooperation with İBB & Kodluyoruz. Prediction for house prices was developed using the Kaggle House Prices - Advanced Regression Techniques competition dataset.
+"Dự đoán về giá nhà", xây dựng trên Streamlit framework, được phát triển bằng cách sử dụng bộ dữ liệu Kaggle 'House Prices - Advanced Regression Techniques'.
 
-## Data
+## Dữ liệu
+Bộ dữ liệu (dataset) tham khảo tại [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
 
-The dataset is available at [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques).
+## Mục tiêu
 
-## Goal
+Mục tiêu của dự án này là dự đoán giá của một ngôi nhà ở Ames bằng cách sử dụng các thuộc tính do bộ dữ liệu cung cấp.
 
-The goal of this project is to predict the price of a house in Ames using the features provided by the dataset.
+## Thuộc tính
 
-## Features
+Bộ dữ liệu chứa các thuộc tính sau:
 
-The dataset contains the following features:
-
-* **OverallQual**: Overall quality of the house
-* **GrLivArea**: Above grade (ground) living area square feet
-* **GarageCars**: Number of garage cars
-* **TotalBsmtSF**: Total square feet of basement area
-* **FullBath**: Number of full baths
-* **YearBuilt**: Year house was built
-* **TotRmsAbvGrd**: Total number of rooms above grade (excluding bathrooms and closets)
-* **Fireplaces**: Number of fireplaces
-* **BedroomAbvGr**: Number of bedrooms above grade
-* **GarageYrBlt**: Year garage was built
-* **LowQualFinSF**: Lowest quality finished square feet
-* **LotFrontage**: Lot frontage square feet
-* **MasVnrArea**: Masonry veneer square feet
-* **WoodDeckSF**: Square feet of wood deck area
-* **OpenPorchSF**: Open porch square feet
-* **EnclosedPorch**: Enclosed porch square feet
-* **3SsnPorch**: Three season porch square feet
-* **ScreenPorch**: Screen porch square feet
-* **PoolArea**: Pool square feet
-* **MiscVal**: Miscellaneous value
+* **OverallQual**: Chất lượng tổng thể của ngôi nhà
+* **GrLivArea**: Diện tích sinh hoạt trên tầng (mặt đất) feet vuông
+* **GarageCars**: Số lượng gara ô tô
+* **TotalBsmtSF**: Tổng diện tích thước vuông diện tích tầng hầm
+* **FullBath**: Số lượng bồn tắm
+* **YearBuilt**: Năm xây nhà
+* **TotRmsAbvGrd**: Tổng số phòng trên cấp (không bao gồm phòng tắm và tủ quần áo)
+* **Fireplaces**: Số lượng lò sưởi
+* **BedroomAbvGr**: Số phòng ngủ trên tầng
+* **GarageYrBlt**: Năm ga ra được xây dựng
+* **LowQualFinSF**: Diện tích phần chất lượng thấp nhất đã hoàn thành
+* **LotFrontage**: Diện tích lô đất mặt tiền
+* **MasVnrArea**: Diện tích gạch ốp tường
+* **WoodDeckSF**: Diện tích sàn gỗ
+* **OpenPorchSF**: Diện tích hiên mở
+* **EnclosedPorch**: Diện tích hiên nhà kín
+* **3SsnPorch**: Diện tích hiên nhà ba mùa
+* **ScreenPorch**: Diện tích hiên nhà mặt tiền
+* **PoolArea**: Diện tích hồ bơi
+* **MiscVal**: Giá trị khác
 * **MoSold**: Month house was sold
-* **YrSold**: Year house was sold
-* **SalePrice**: Sale price
+* **YrSold**: Năm bán nhà
+* **SalePrice**: Giá khuyến mãi
 
-## Usage
+## Cách sử dụng
 
 ```bash
 # clone the repo
@@ -74,11 +73,10 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-## Model Development
+## Mô hình phát triển
 
-### Model
-
-The model is based on a [LightGBM](https://lightgbm.readthedocs.io/en/latest/index.html) algorithm.
+### Mô hình
+Dựa trên thuật toán [Grid Search Cross Validation](https://lightgbm.readthedocs.io/en/latest/index.html).
 
 ### Training
 
@@ -161,18 +159,7 @@ inputDict["LotFrontage"] = st.sidebar.slider("LotFrontage", ceil(droppedDf["LotF
 floor(droppedDf["LotFrontage"].max()), int(droppedDf["LotFrontage"].mean()))
 ```
 
-## Contributions
 
-* Batuhan UZUN - [Github](https://https://github.com/uzunb) - [LinkedIn](https://linkedin.com/in/uzunb)
-* Selin ÇILDAM - [Github](https://github.com/selincildam) - [LinkedIn](https://www.linkedin.com/in/selincildam/)
-* Müşerref ÖZKAN - [Github](https://github.com/MuserrefOzkn) - [LinkedIn](https://www.linkedin.com/in/müşerrefözkan)
-* Üftade Bengi EROLÇAY - [Github](https://github.com/uftadeerolcay) - [LinkedIn](https://www.linkedin.com/in/uftade-bengi-erolcay)
-* Dursun Tunahan BİLGİN - [Github](https://github.com/bilgind17) - [LinkedIn](https://www.linkedin.com/in/dtunahanbilgin/)
-* Anıl DÖNMEZ - [Github](https://github.com/anildonmz) - [LinkedIn](https://www.linkedin.com/in/anilldonmez/)
-* Hazal SEZGİN - [Github](https://github.com/hazalsezgin) - [LinkedIn](https://www.linkedin.com/in/hazal-sezgin-48a253170)
-* Hanife YAMAN - [Github](https://github.com/hanifeyaman) - [LinkedIn](https://www.linkedin.com/in/hanife-yaman/)
-* Yiğit YILMAZ - [Github](https://github.com/yilmazyigit) - [LinkedIn](https://www.linkedin.com/in/yigityilmaz4/)
-* Aslı ÇİÇEK - [Github](https://github.com/aslicicek) - [LinkedIn](https://www.linkedin.com/in/aslicicek/)
 """)
 
 app()

@@ -11,27 +11,29 @@ def run():
     # st.set_page_config(page_title="Enter Page", page_icon="💻")
 
     st.write("""
-    # Welcome to House Price Prediction!
+    # Đồ án Học máy: Dự đoán giá nhà
     """) 
 
     st.markdown(
         """
-    This repo has been developed for the Istanbul Data Science Bootcamp, organized in cooperation with IBB & Kodluyoruz. 
-    Prediction for house prices was developed using the Kaggle House Prices - Advanced Regression Techniques competition dataset.
-    
-    ### Goal
+    "Dự đoán về giá nhà", xây dựng trên Streamlit framework, được phát triển bằng cách sử dụng bộ dữ liệu Kaggle 'House Prices - Advanced Regression Techniques'.
+    ### Mục tiêu
 
-    The goal of this project is to predict the price of a house in Ames using the features provided by the dataset.
+    Mục tiêu của dự án này là dự đoán giá của một ngôi nhà ở Ames bằng cách sử dụng các tính năng do bộ dữ liệu cung cấp.
     
     ------
 
-    ###### Group 2 | Machine Learning Model Deployment
+    ###### Sinh viên thực hiện:
 
-    ###### Version: 1.0
+    Đỗ Duy Nhựt - 20110298
+
+    Ngô Vũ Nhật Nguyên
+
+    Hồ Hà Thanh Lâm - 20110667
+
     """
     )
     st.write("###### Date: ", thedate)
-    st.markdown('![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=https://share.streamlit.io/your_deployed_app_link&label=VisitorsCount&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)')
                                         
                                           
                             
